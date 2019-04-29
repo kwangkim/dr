@@ -1,0 +1,25 @@
+{% load staticfiles %}
+        <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Django</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+    {% block content %}{% endblock content %}
+    <div>
+        <h2>Menu</h2>
+        <p>
+            <a href="{% url 'show_movies' %}">Show movies</a>
+            <a href="{% url 'show_directors' %}">Show directors</a>
+            <a href="{% url 'add_movie' %}">Add a movie</a>
+            <a href="{% url 'add_director' %}">Add a director</a>      
+        </p>
+        </ul>
+    <div>
+</body>
+</html>
